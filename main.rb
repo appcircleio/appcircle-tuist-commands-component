@@ -24,8 +24,12 @@ def runCommand(command)
     end
 end
 
+if __FILE__ == $PROGRAM_NAME
+
 tuist_path = env_has_key("AC_TUIST_PATH")
 tuist_commands = env_has_key("AC_TUIST_COMMANDS")
 
 
 runCommand("#{tuist_commands} -p #{tuist_path}")
+
+end # if __FILE__ == $PROGRAM_NAME
